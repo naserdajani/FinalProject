@@ -23,3 +23,22 @@ if mode == 'root2':
     num = float(input('Enter a number = '))
     sqrt = num ** 0.5
     print('The square root of %0.3f is %0.3f' % (num, sqrt))
+    
+# x root equation
+if mode == 'rootx':
+    num = float(input ('Enter a number = '))
+    degree_of_root = float(input('Degree of Root = '))
+    xroot = num ** (1/degree_of_root)
+    print('Root %.0f of %o.3f is %0.3f' % (degree_of_root, num, xroot))
+    return
+
+# Velocity equation
+if mode == 'velocity':
+    displacement = input('Displacement(m) = ')
+    time = input('Time(s) = ')
+# used a float because there are strings
+    velocity = float (displacement) / float(time)
+    print(f'Velocity = {velocity} m/s')
+    return
+
+    
