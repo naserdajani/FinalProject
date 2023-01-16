@@ -14,3 +14,12 @@ if mode == 'list'
     print('Use mode: equations for a full list of all equations')
     print(' ** Please use same casing\n')
 
+# equation printing mode
+if mode == 'equations':
+    print('Root 2 : N^2\n\n Root x: N^x\n\n Velocity: distance/time\n\n Acceleration: Final velocity - initial velocity / time\n\n Force: Mass * Acceleration\n\n Power: Work / time\n\n Density: Mass / Volume\n\n Potential Energy: Mass * Gravity * Height \n\n Kinetic Energy: 1/2 Mass * Velocity^2 \n\n Elastic Energy: 1/2 spring_constant * extention^2 \n\n')
+
+# for square root equations
+if mode == 'root2':
+    num = float(input('Enter a number = '))
+    sqrt = num ** 0.5
+    print('The square root of %0.3f is %0.3f' % (num, sqrt))
