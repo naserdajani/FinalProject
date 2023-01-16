@@ -6,10 +6,10 @@ if len(sys.argv) == 1:
 
 def main():
 # make mode command line argument 
-mode = sys.argv[1]
+    mode = sys.argv[1]
 
 # putting all equations into proper casing
-if mode == 'list'
+    if mode == 'list'
     print('\n 1. acceleration\n 2. velocity\n 3. root2\n 4 rootx\n 5. force\n 6. power\n 7. density\n 8. potential_energy or PE\n 9. kinetic_energy or KE\n 10.')
     print('Use mode: equations for a full list of all equations')
     print(' ** Please use same casing\n')
@@ -41,4 +41,22 @@ if mode == 'velocity':
     print(f'Velocity = {velocity} m/s')
     return
 
-    
+#acceleration equation
+if mode == 'acceleration':
+    int_velocity = input ('Initial Velocity(m/s) = ')
+    fin_velocity = input ('Final Velocity(m/s) = ')
+    time = input ('Time(s) = ')
+# used a float because there are strIngs
+acceleration = (float(fin_velocity) - float(int_velocity)) / float(time)
+#printing acceleration
+print('Acceleration = %0.3f m/s^2' % (acceleration))
+return
+
+# force equation
+if mode == 'force':
+    mass = input('Mass(g) = ')
+    accelerationf = input('Acceleration(m/s^2') = ')
+    force = float(mass) * float(accelerationf)
+    print('Force(N) = %0.3f N ' % (force))
+
+# now power formula
