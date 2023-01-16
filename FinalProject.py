@@ -47,10 +47,10 @@ if mode == 'acceleration':
     fin_velocity = input ('Final Velocity(m/s) = ')
     time = input ('Time(s) = ')
 # used a float because there are strIngs
-acceleration = (float(fin_velocity) - float(int_velocity)) / float(time)
+    acceleration = (float(fin_velocity) - float(int_velocity)) / float(time)
 #printing acceleration
-print('Acceleration = %0.3f m/s^2' % (acceleration))
-return
+    print('Acceleration = %0.3f m/s^2' % (acceleration))
+    return
 
 # force equation
 if mode == 'force':
@@ -59,4 +59,11 @@ if mode == 'force':
     force = float(mass) * float(accelerationf)
     print('Force(N) = %0.3f N ' % (force))
 
-# now power formula
+# power formula
+if mode == 'power':
+    work_done = input('Work Done(J) = ')
+    time = input('Time Taken(s) = ')
+    power = float(work_done) / float(time)
+    print('Power(W) = %0.3f' % power)
+
+# density formula
