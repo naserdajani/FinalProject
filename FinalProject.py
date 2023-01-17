@@ -9,8 +9,8 @@ def main():
     mode = sys.argv[1]
 
 # putting all equations into proper casing
-    if mode == 'list'
-    print('\n 1. acceleration\n 2. velocity\n 3. root2\n 4 rootx\n 5. force\n 6. power\n 7. density\n 8. potential_energy or PE\n 9. kinetic_energy or KE\n 10.')
+if mode == 'list':
+    print('\n 1. acceleration\n 2. velocity\n 3. root2\n 4 rootx\n 5. force\n 6. power\n 7. density\n 8. potential_energy or PE\n 9. kinetic_energy or KE\n 10. elastic_energy or EE')
     print('Use mode: equations for a full list of all equations')
     print(' ** Please use same casing\n')
 
@@ -55,7 +55,7 @@ if mode == 'acceleration':
 # force equation
 if mode == 'force':
     mass = input('Mass(g) = ')
-    accelerationf = input('Acceleration(m/s^2') = ')
+    accelerationf = input('Acceleration(m/s^2) = ')
     force = float(mass) * float(accelerationf)
     print('Force(N) = %0.3f N ' % (force))
 
@@ -73,4 +73,3 @@ if mode == 'density':
     density = float(mass) / float(volume)
     print('Density(p) = %0.3f' % (desnity))
 
-    
