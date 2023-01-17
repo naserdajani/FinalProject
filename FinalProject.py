@@ -67,3 +67,10 @@ if mode == 'power':
     print('Power(W) = %0.3f' % power)
 
 # density formula
+if mode == 'density':
+    mass = input('Mass(g) = ')
+    volume = input('Volume(cm^3) = ')
+    density = float(mass) / float(volume)
+    print('Density(p) = %0.3f' % (desnity))
+
+    
