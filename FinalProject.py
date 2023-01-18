@@ -73,5 +73,16 @@ def main():
         density = float(mass) / float(volume)
         print('Density(p) = %0.3f' % (density))
 
+    # potential energy formula
+    if (mode == 'potential_energy' or mode == 'PE'):
+        print('Gravity = 9.81 m/s^2')
+        gravity = 9.81
+        mass = input('Mass(g) = ')
+        height = input('Height(m) = ')
+        PE = float(mass) * float(gravity) * float(height)
+        print('Potential Energy(J) = %.2f' %(PE))
+
+
+
 if __name__ == "__main__":
     main()
