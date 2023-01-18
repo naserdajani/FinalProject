@@ -80,7 +80,7 @@ def main():
         mass = input('Mass(g) = ')
         height = input('Height(m) = ')
         PE = float(mass) * float(gravity) * float(height)
-        print('Potential Energy(J) = %.2f' %(PE))
+        print('Potential Energy(J) = %.2f' % (PE))
 
 
 
