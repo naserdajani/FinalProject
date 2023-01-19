@@ -11,12 +11,12 @@ def main():
     # putting all equations into proper casing
     if mode == "list":
         print('\n 1. acceleration\n 2. velocity\n 3. root2\n 4 rootx\n 5. force\n 6. power\n 7. density\n 8. potential_energy or PE\n 9. kinetic_energy or KE\n 10. elastic_energy or EE')
-        print('Use mode: equations for a full list of all equations')
-        print(' ** Please use same casing\n')
+        print(' Use mode: equations for a full list of all equations')
+        print(' Please use same casing\n')
 
     # equation printing mode
     if mode == 'equations':
-        print('Root 2 : N^2\n\n Root x: N^x\n\n Velocity: distance/time\n\n Acceleration: Final velocity - initial velocity / time\n\n Force: Mass * Acceleration\n\n Power: Work / time\n\n Density: Mass / Volume\n\n Potential Energy: Mass * Gravity * Height \n\n Kinetic Energy: 1/2 Mass * Velocity^2 \n\n Elastic Energy: 1/2 spring_constant * extention^2 \n\n')
+        print(' Root 2 : N^2\n\n Root x: N^x\n\n Velocity: distance/time\n\n Acceleration: Final velocity - initial velocity / time\n\n Force: Mass * Acceleration\n\n Power: Work / time\n\n Density: Mass / Volume\n\n Potential Energy: Mass * Gravity * Height \n\n Kinetic Energy: 1/2 Mass * Velocity^2 \n\n Elastic Energy: 1/2 spring_constant * extention^2 \n\n')
 
     # for square root equations
     if mode == 'root2':
@@ -29,7 +29,7 @@ def main():
         num = float(input ('Enter a number = '))
         degree_of_root = float(input('Degree of Root = '))
         xroot = num ** (1/degree_of_root)
-        print('Root %.0f of %o.3f is %0.3f' % (degree_of_root, num, xroot))
+        print(f'Root {degree_of_root} of {float(num)} is {float(xroot)}')
         return
 
     # Velocity equation
@@ -40,7 +40,7 @@ def main():
         velocity = float (displacement) / float(time)
         print(f'Velocity = {velocity} m/s')
         return
-
+        
     #acceleration equation
     if mode == 'acceleration':
         int_velocity = input ('Initial Velocity(m/s) = ')
@@ -57,7 +57,7 @@ def main():
         mass = input('Mass(g) = ')
         accelerationf = input('Acceleration(m/s^2) = ')
         force = float(mass) * float(accelerationf)
-        print('Force(N) = %0.3f N ' % (force))
+        print('Force(N) = %0.3f N' % (force))
 
     # power formula
     if mode == 'power':
@@ -81,8 +81,21 @@ def main():
         height = input('Height(m) = ')
         PE = float(mass) * float(gravity) * float(height)
         print('Potential Energy(J) = %.2f' % (PE))
-
-
+    
+    #elastic energy formula
+    if (mode == 'elastic_energy' or mode == 'E'):
+        spring_constant = input('Spring Constant = ')
+        extention = input('Extention = ')
+        elastic_energy = (0.5 * float(spring_constant)) * (float(extention) ** 2)
+        print('Elastic Energy = %.3f' % elastic_energy)
+    
+    # kinetic energy
+    if (mode == 'kinetic_energy' or mode == 'KE'):
+        mass = input('Mass(g) = ')
+        velocity = input('Velocity(m/s) = ')
+        kinetic_energy = (0.5 * float(mass)) * (float(velocity) **2)
+        print('Kinetic Energy = %.3f' % kinetic_energy)
+    sys.exit()
 
 if __name__ == "__main__":
     main()
